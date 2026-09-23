@@ -37,18 +37,12 @@ namespace DariusTask
                 GetTable(conn);
 
 
-                //We need to get that tablename finder back
                 var cmd = new SqlCommand($"SELECT COUNT(*) FROM {tableName}", conn);
                 int rows = Convert.ToInt32(cmd.ExecuteScalar());
                 string input = args[0]?.Trim();
                 bool withinLoop = false;
-
-                //Add a checker if there are duplicate TaskIDs
-                //Add them all to a set to check
-
                 //Input
-                //SlotIndex has 99 and -4, which should be numerical, TaskID has two eights
-                //Ask if they want taskID 8 Second one, to be changed to 9
+
                 while(true)
                 {
                     Console.WriteLine("\nType 'Q' to quit\nPlease select a device by its ID to check its details:");
@@ -64,7 +58,6 @@ namespace DariusTask
                         if(selection <= rows && selection > 0)
                         {
 
-                            //Console.WriteLine($"{rows}");
                             cmd = new SqlCommand($"SELECT * FROM {tableName} WHERE EquipId = {selection}", conn);
                             var reader = cmd.ExecuteReader();
                             ReadReader(reader);
@@ -133,7 +126,6 @@ namespace DariusTask
             cmd = new SqlCommand($"SELECT EquipID, TaskID FROM {tableName} WHERE TaskID = {selection}", conn);
             var reader = cmd.ExecuteReader();
 
-            //If statement here
             if(rows > 1) {
                
                 Console.WriteLine("\n\nDuplicates Detected in TaskID!");
