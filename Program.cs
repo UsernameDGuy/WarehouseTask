@@ -226,7 +226,6 @@ namespace DariusTask
 
                 }
 
-                Console.WriteLine(names[i] + "SDD");
                 cmd = new SqlCommand($"UPDATE {tableName} SET {names[i]} = '{input}' WHERE EquipID = {selection}", conn);
 
                 try
