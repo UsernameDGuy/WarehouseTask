@@ -1,0 +1,9 @@
+1. I had asked the AI to help me optimise and make simpler code, while having it handle the SQL Logic and as a guide for framing the infrastructure of the program. I also used it where I was uncertain as to what in-built functions or code to use, such as SQLCommands and so on. However, the AI did help me make the finding Nulls portion of CheckErrors function the most, as I was on a time constraint during that part of the code.
+
+2. The AI overcomplicated, and in some cases, severely misunderstood my requests, although such incidents were thankfully easily noticeable and remedied with either a better prompt, follow-ups, and manual modification. Specifically, the AI had made issues with the function to enable code, which was further complicated until I realised I could simply use a switch case there. Otherwise, it did help me build most of the code.
+
+3. I mostly shifted around variable names (For personal easier reading) and applied what I learnt from the AI (With verification that it works as advertised by the AI) while adjusting the variables, functions, and order so that the program functioned as a whole.
+
+
+
+
