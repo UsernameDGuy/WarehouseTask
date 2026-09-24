@@ -8,6 +8,7 @@ Assuming Microsoft Server Express 2025 has been installed on the local computer,
 
 Run the sql file under Microsoft SQL Server Management System after connecting to local computer.
 
+It is recommended to download WarehouseTask.exe from the Releases instead of the main branch
 Simply cd to the location of WarehouseTask.exe in command prompt and use it as follows:
 
 WarehouseTask.Exe {Number within selectable range}
